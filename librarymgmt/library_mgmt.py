@@ -27,6 +27,13 @@ class Library:
         else :
             for book in self.books:
                 book.display_info()
+#--Inheriatnce Exxample
+class SpecialLibrary(Library):
+    def add_book(self,book):
+        super().add_book(book)
+        print(f"Special handling of the book {book.title}")
+
+
 book1 = Book("About Life", "Harsh", "HA1234")
 book2 = Book("AWS Architecture", "Harsh", "HA6789")
 book3 = Book("GraphQL Examples", "Harsh", "HA2468")
@@ -42,6 +49,12 @@ my_lib.display_books()
 #--Remove book
 my_lib.remove_book(book1.isbn)
 my_lib.display_books()
+
+#-----Inheritance inheritance
+specialLibrary = SpecialLibrary()
+specialLibrary.add_book(book2)
+
+
 
 
 
