@@ -31,12 +31,18 @@ book1 = Book("About Life", "Harsh", "HA1234")
 book2 = Book("AWS Architecture", "Harsh", "HA6789")
 book3 = Book("GraphQL Examples", "Harsh", "HA2468")
 
+#---Add book
 my_lib = Library()
 my_lib.add_book(book1)
 my_lib.add_book(book2)
 my_lib.add_book(book3)
-
+#--Display books
 my_lib.display_books()
+
+#--Remove book
+my_lib.remove_book(book1.isbn)
+my_lib.display_books()
+
 
 
 
